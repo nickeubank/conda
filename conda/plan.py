@@ -415,7 +415,7 @@ def install_actions(prefix, index, specs, force=False, only_names=None, always_c
 
     must_have = {}
     if config.track_features:
-        specs.extend(x + '@' for x in config.track_features)
+        specs.extend('@' + x for x in config.track_features)
 
     pkgs = r.install(specs, linked, update_deps=update_deps)
 
